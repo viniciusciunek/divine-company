@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loja Virtual</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("pages/header.html", function () {
+          var inputPesquisa = document.getElementById("input-pesquisa");
+          inputPesquisa.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              pesquisarProdutos();
+            }
+          });
+
+          var botaoPesquisa = document.getElementById("botao-pesquisa");
+          botaoPesquisa.addEventListener("click", pesquisarProdutos);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <main>
+      <div id="quadro-categorias">
+        <button class="botao-categoria" data-categoria="todos">Todos</button>
+        <button class="botao-categoria" data-categoria="camiseta">Camisetas</button>
+        <button class="botao-categoria" data-categoria="blusa">Blusas</button>
+        <button class="botao-categoria" data-categoria="calca">Calças</button>
+        <button class="botao-categoria" data-categoria="acessorios">Acessórios</button>
+      </div>
+
+      <div id="popup">
+        <p id="popup-mensagem"></p>
+      </div>
+
+      <div id="container-produtos"></div>
+
+      <div id="nav-pagina"></div>
+
+      <div class="lista-carrinho">
+        <p>Lista de itens:</p>
+        <div id="carrinho-lista"></div>
+      </div>
+
+      <div class="parte-de-baixo">
+        <div class="select-e-botao-carrinho">
+          <h2>Remover itens do carrinho:</h2>
+          <select id="select-carrinho"></select>
+          <button id="remover-carrinho">Remover</button>
+        </div>
+
+        <div class="total-e-comprar-produtos">
+          <p>Total:</p>
+          <div id="total"></div>
+          <button id="btn-comprar">Comprar</button>
+        </div>
+      </div>
+
+      <div id="modal-pagamento" class="modal" style="display: none">
+        <div class="modal-content">
+          <span class="close" id="close">&times;</span>
+          <h2>Forma de pagamento</h2>
+          <div class="forma-de-pagamento">
+            <label> <input type="radio" name="forma-pagamento" value="credito" />Cartão de crédito </label>
+            <label> <input type="radio" name="forma-pagamento" value="debito" />Cartão de débito </label>
+            <label> <input type="radio" name="forma-pagamento" value="pix" />Pix </label>
+          </div>
+
+          <div id="form-cartao" style="display: flex">
+            <label for="nome-completo">Nome completo: </label>
+            <input type="text" name="nome-completo" id="nome-completo" required />
+
+            <label for="numero-cartao"> Número do cartão: </label>
+            <input type="text" name="numero-cartao" id="numero-cartao" required />
+
+            <label for="data-validade"> Data de validade:</label>
+            <input type="text" name="data-validade" id="data-validade" required />
+
+            <label> Código de segurança:</label>
+            <input type="text" name="codigo-seguranca" id="codigo-seguranca" required />
+
+            <button type="submit" id="botao-pagar">Pagar</button>
+          </div>
+
+          <div id="form-pix" style="display: none">
+            <p>Chave: vinicius_ciunek@hotmail.com</p>
+            <img src="images/pix.png" alt="" srcset="" />
+            <button id="botao-pagar-pix">Pagar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/pedido.js"></script>
+    <script src="scripts/produto.js"></script>
+    <script src="index.js"></script>
+    <script src="scripts/pagamento.js"></script>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+.botoes-escolha {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.botoes-escolha button {
+  margin: 0.3rem;
+  background: ghostwhite;
+  color: rgb(31, 111, 120);
+  border: 1px solid rgb(31, 111, 120);
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.botoes-escolha button:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+}
+
+/* começo cadastro  */
+#cadastro {
+  margin: 2%;
+  text-align: center;
+}
+
+#cadastro h1 {
+  font-family: "Bruno Ace SC", cursive;
+  font-weight: bold;
+  color: rgb(31, 111, 120);
+  letter-spacing: 2px;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 2%;
+}
+
+#form-cadastro {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-cadastro label {
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(31, 111, 120);
+  margin-top: 2%;
+  align-self: flex-start;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width: 230px) {
+  #form-cadastro label {
+    align-self: center;
+  }
+}
+
+#form-cadastro input {
+  margin-top: 0.3rem;
+  background: ghostwhite;
+  border: 1px solid rgb(31, 111, 120);
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 60%;
+}
+
+#form-cadastro select {
+  margin-top: 0.3rem;
+  background: ghostwhite;
+  border: 1px solid rgb(31, 111, 120);
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 61%;
+}
+
+#requisitos-senha {
+  background: ghostwhite;
+  border: 1px solid rgb(31, 111, 120);
+  border-top: none;
+  outline: none;
+  transition: display 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 60%;
+  list-style-type: disc;
+  list-style-position: inside;
+  text-align: left;
+}
+
+#requisitos-senha li {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(31, 111, 120);
+  padding-left: 10px;
+}
+
+/* div dos botao */
+.div-botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 1%;
+}
+
+#botao-cadastro,
+#botao-login {
+  margin-top: 0.3rem;
+  background: ghostwhite;
+  color: rgb(31, 111, 120);
+  border: 1px solid rgb(31, 111, 120);
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 50%;
+}
+
+#botao-cadastro:hover,
+#botao-login:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+}
+/* fim cadastro  */
+
+/* começo login */
+#login {
+  margin: 2%;
+  text-align: center;
+}
+
+#login h1 {
+  font-family: "Bruno Ace SC", cursive;
+  font-weight: bold;
+  color: rgb(31, 111, 120);
+  letter-spacing: 2px;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 2%;
+}
+
+#form-login {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-login label {
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(31, 111, 120);
+  margin-top: 2%;
+  align-self: flex-start;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width: 230px) {
+  #form-login label {
+    align-self: center;
+  }
+}
+
+#form-login input {
+  margin-top: 0.3rem;
+  background: ghostwhite;
+  border: 1px solid rgb(31, 111, 120);
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.informacoes {
+  border: 1px solid rgb(31, 111, 120);
+  border-radius: 5px;
+  max-width: 90%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.informacoes-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(31, 111, 120);
+  font-size: 17px;
+}
+
+.informacoes-seta {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent rgb(31, 111, 120) transparent;
+}
+
+.informacoes-aberto .informacoes-seta {
+  border-width: 0 5px 5px 5px;
+  transform: rotate(180deg);
+}
+
+.informacoes-conteudo {
+  display: none;
+  padding: 10px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.informacoes-aberto .informacoes-conteudo {
+  display: block;
+  animation: abrir 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes abrir {
+  from {
+    height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* parte dos pedidos */
+.pedidos {
+  border: 1px solid rgb(31, 111, 120);
+  border-radius: 5px;
+  max-width: 90%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.pedidos-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(31, 111, 120);
+  font-size: 17px;
+}
+
+.pedidos-seta {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent rgb(31, 111, 120) transparent;
+}
+
+.pedidos-aberto .pedidos-seta {
+  border-width: 0 5px 5px 5px;
+  transform: rotate(180deg);
+}
+
+.pedidos-conteudo {
+  display: none;
+  padding: 10px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.pedidos-aberto .pedidos-conteudo {
+  display: block;
+  animation: abrir 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}

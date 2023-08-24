@@ -1,0 +1,585 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+} */
+
+/* header */
+/* barra de navegação - nav inteira */
+.barra-navegacao {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  place-content: center space-between;
+  flex-flow: row wrap;
+  background: rgb(31, 111, 120);
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+}
+
+@media (max-width: 768px) {
+  .barra-navegacao {
+    flex-direction: column;
+  }
+  .form-pesquisa {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+  }
+}
+
+/* barra de navegação - titulo */
+.barra-navegacao a {
+  color: ghostwhite;
+  font-family: "Bruno Ace SC", cursive;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.form-pesquisa {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/* formulario pesquisa - caixa input */
+.form-pesquisa input {
+  background: ghostwhite;
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-radius: 7px;
+  width: 200px;
+  color: rgb(31, 111, 120);
+  font-family: "Bruno Ace SC", cursive;
+  font-weight: lighter;
+  width: 90%;
+}
+
+/* formulario pesquisa - botao pesquisa */
+.form-pesquisa button {
+  background: ghostwhite;
+  border: none;
+  padding: 5px;
+  border-radius: 7px;
+  color: rgb(31, 111, 120);
+  font-family: "Bruno Ace SC", cursive;
+  cursor: pointer;
+}
+
+/* main */
+/* categorias quadro */
+#quadro-categorias {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  background: rgb(31, 111, 120);
+  padding: 2%;
+  border-radius: 10px;
+  color: ghostwhite;
+  margin: 2%;
+}
+
+.botao-categoria {
+  background: ghostwhite;
+  color: rgb(31, 111, 120);
+  border: 1px solid rgb(31, 111, 120);
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+}
+
+.botao-categoria:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+}
+
+/* div principal produtos dentro */
+#container-produtos {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+}
+
+/* cada produto separado */
+.produto-numero {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  background: rgb(31, 111, 120);
+  padding: 3%;
+  border-radius: 10px;
+  color: ghostwhite;
+  margin-top: 2%;
+  flex-flow: column nowrap;
+  width: 20rem;
+  /* height: 25em; */
+  justify-content: center;
+  align-content: center;
+}
+
+#imagem-produto {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 10px;
+}
+
+/* titulo do produto */
+#titulo-produto {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+/* preço do produto */
+#preco-produto {
+  font-family: "Russo One", sans-serif;
+  font-size: 22px;
+  margin-top: 1rem;
+}
+
+/* quantidade produto */
+#quantidade-produto {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+#select-tamanho {
+  margin-top: 1rem;
+  background: ghostwhite;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 7px;
+  color: rgb(31, 111, 120);
+  transition: transform 0.2s ease-in-out;
+  width: 20%;
+}
+
+/* estilizando o input e o botao do produto */
+.produto-numero input,
+.produto-numero button {
+  margin-top: 1rem;
+  background: ghostwhite;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 7px;
+  color: rgb(31, 111, 120);
+  transition: transform 0.2s ease-in-out;
+  width: 80%;
+}
+
+/* efeito de ir pra baixo o botao */
+.produto-numero button:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+}
+
+/* lista de itens do carrinho */
+.lista-carrinho {
+  margin: 2%;
+  margin-top: 2%;
+  background: rgb(31, 111, 120);
+  color: ghostwhite;
+  font-family: "Quicksand", sans-serif;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.lista-carrinho p {
+  margin-bottom: 5px;
+}
+
+/* botoes de navegação pagina */
+#nav-pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 2%;
+}
+
+.navegacao-pagina button {
+  margin: 5px;
+  background: ghostwhite;
+  color: rgb(31, 111, 120);
+  border: 1px solid rgb(31, 111, 120);
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.navegacao-pagina button:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+}
+
+#numero-pagina {
+  margin: 5px;
+  background: ghostwhite;
+  color: rgb(31, 111, 120);
+  border: 1px solid rgb(31, 111, 120);
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 25px;
+}
+
+#pagina-atual {
+  margin: 5px;
+  background: rgb(31, 111, 120);
+  color: ghostwhite;
+  border: 1px solid ghostwhite;
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 30px;
+}
+
+/* popup quando adicionado ao carrinho */
+#popup {
+  font-family: "Quicksand", sans-serif;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  padding: 12px;
+  color: ghostwhite;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: none;
+  transform: translateX(-50%);
+  animation: slide-up 0.3s ease-out;
+}
+
+.popup-sucesso {
+  background-color: green;
+}
+
+.popup-erro {
+  background-color: red;
+}
+
+/* parte de baixo inteira */
+.parte-de-baixo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background: rgb(31, 111, 120);
+}
+
+/* select e botao */
+.select-e-botao-carrinho {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(31, 111, 120);
+  padding: 20px;
+  align-content: center;
+}
+
+/* titulo remover itens do carrinho */
+.select-e-botao-carrinho h2 {
+  color: ghostwhite;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* select para remover do carrinho */
+#select-carrinho {
+  border: none;
+  border-radius: 10px;
+  box-shadow: -10px 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  outline: none;
+  width: 250px;
+  margin: 1rem;
+  padding: 8px;
+  background: whitesmoke;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  color: rgb(31, 111, 120);
+}
+
+/* efeito de se mexer */
+#select-carrinho:hover {
+  transform: translateX(3px);
+}
+
+/* botao de remover do carrinho */
+#remover-carrinho {
+  border: none;
+  border-radius: 10px;
+  box-shadow: -10px 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 8px;
+  outline: none;
+  background: whitesmoke;
+  margin-left: 0.5rem;
+  width: 100px;
+  transition: transform 0.2s ease-in-out;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(31, 111, 120);
+  font-weight: bolder;
+}
+
+/* efeito de mover qunado passa por cima do botao */
+#remover-carrinho:hover {
+  cursor: pointer;
+  transform: translateX(3px);
+}
+
+/* deixando flex o total */
+.total-e-comprar-produtos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(31, 111, 120);
+  padding: 20px;
+  align-content: center;
+}
+
+.total-e-comprar-produtos p {
+  font-family: "Quicksand", sans-serif;
+  color: ghostwhite;
+}
+
+/* preço ao lado do select */
+#total {
+  margin: 10px;
+  font-family: "Quicksand", sans-serif;
+  color: ghostwhite;
+  font-weight: bold;
+}
+
+#btn-comprar {
+  border: none;
+  border-radius: 10px;
+  box-shadow: -10px 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 8px;
+  outline: none;
+  background: whitesmoke;
+  margin-left: 0.5rem;
+  width: 100px;
+  transition: transform 0.2s ease-in-out;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(31, 111, 120);
+  font-weight: bolder;
+}
+
+#btn-comprar:hover {
+  cursor: pointer;
+  transform: translateX(3px);
+}
+
+/* background verde do pagamento e caixa inteira */
+.modal {
+  background: rgb(31, 111, 120);
+  padding: 15px;
+  width: 90%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 3%;
+}
+
+#close {
+  color: ghostwhite;
+  font-weight: bolder;
+  transition: transform 0.2s ease-in-out;
+}
+
+#close:hover {
+  cursor: pointer;
+  transform: scale(1.5); /* aumenta o tamanho em 20% */
+}
+
+.modal-content {
+  width: 100%;
+}
+
+/* titulo forma de pagamento quadro */
+.modal-content h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Quicksand", sans-serif;
+  color: ghostwhite;
+}
+
+/* formas de pagaemtno  */
+.forma-de-pagamento {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: 0.5rem;
+}
+
+/* bolinha de forma de pagamento */
+.forma-de-pagamento input {
+  margin-top: 1rem;
+  background: ghostwhite;
+  border: none;
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  margin-right: 5px;
+}
+
+/* bolinha de forma de pagamento */
+.forma-de-pagamento input:hover {
+  cursor: pointer;
+  transform: translateX(-3px);
+  transform: scale(1.2); /* aumenta o tamanho em 20% */
+}
+
+/* escrita da forma de pagamento */
+.forma-de-pagamento label {
+  font-family: "Quicksand", sans-serif;
+  color: ghostwhite;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 0.5rem;
+}
+
+/* escrita da forma de pagamento */
+.forma-de-pagamento label:hover {
+  cursor: pointer;
+  transform: translateX(-3px);
+}
+
+/* dados do pagamento */
+#form-cartao {
+  font-family: "Quicksand", sans-serif;
+  color: ghostwhite;
+  width: 100%;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* input dos dados do pagamento */
+#form-cartao input {
+  margin-top: 0.3rem;
+  background: ghostwhite;
+  border: none;
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 10px;
+  width: 90%;
+}
+
+#form-cartao button {
+  border: none;
+  border-radius: 10px;
+  box-shadow: -10px 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 8px;
+  outline: none;
+  background: whitesmoke;
+  margin-left: 15rem;
+  width: 100px;
+  transition: transform 0.2s ease-in-out;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(31, 111, 120);
+  font-weight: bolder;
+  margin-top: 15px;
+}
+
+#form-cartao button:hover {
+  cursor: pointer;
+  transform: translateX(3px);
+}
+
+#form-pix {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-pix button {
+  border: none;
+  border-radius: 10px;
+  box-shadow: -10px 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 8px;
+  outline: none;
+  background: whitesmoke;
+  margin-left: 15rem;
+  width: 100px;
+  transition: transform 0.2s ease-in-out;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(31, 111, 120);
+  font-weight: bolder;
+  margin-top: 15px;
+}
+
+#form-pix button:hover {
+  cursor: pointer;
+  transform: translateX(3px);
+}
+
+#form-pix p {
+  font-family: "Quicksand", sans-serif;
+  color: ghostwhite;
+  margin-bottom: 15px;
+}
+
+#form-pix img {
+  max-width: 10rem;
+}

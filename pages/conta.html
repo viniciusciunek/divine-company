@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro e Login</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/style-conta.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("header.html");
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <main>
+      <div id="popup">
+        <p id="popup-mensagem"></p>
+      </div>
+
+      <div id="minha-conta" style="display: none">
+        <div class="informacoes">
+          <div class="informacoes-titulo">
+            <h3>Minhas informações</h3>
+            <span class="informacoes-seta"></span>
+          </div>
+          <div class="informacoes-conteudo"></div>
+        </div>
+
+        <div class="pedidos">
+          <div class="pedidos-titulo">
+            <h3>Meus Pedidos</h3>
+            <span class="pedidos-seta"></span>
+          </div>
+          <div class="pedidos-conteudo"></div>
+        </div>
+
+        <button id="botao-sair">sair</button>
+      </div>
+
+      <div id="login-ou-cadastro" style="display: none">
+        <div class="botoes-escolha">
+          <button type="button" id="botao-cadastrar">Cadastrar-se</button>
+          <button type="button" id="botao-logar">Login</button>
+        </div>
+
+        <div id="cadastro" style="display: none">
+          <h1>Cadastre-se</h1>
+          <form id="form-cadastro">
+            <label for="nome-completo">Nome Completo:</label>
+            <input
+              type="text"
+              name="nome-completo"
+              id="nome-completo"
+              placeholder="Nome Sobrenome"
+            />
+
+            <label for="cpf">CPF:</label>
+            <input
+              type="text"
+              name="cpf"
+              id="cpf"
+              placeholder="123.456.789-00"
+            />
+
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              name="email"
+              id="email-cadastro"
+              placeholder="email@email.com"
+            />
+
+            <label for="senha">Senha:</label>
+            <input
+              type="password"
+              name="senha"
+              id="senha-cadastro"
+              placeholder="•••••••••••"
+              required
+            />
+
+            <ul id="requisitos-senha" style="display: none">
+              <li>Pelo menos 8 caracteres</li>
+              <li>Pelo menos 1 número</li>
+              <li>Pelo menos 1 letra maiúscula</li>
+            </ul>
+
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" name="nascimento" id="nascimento" />
+
+            <label for="pais-cadastro">País:</label>
+            <select
+              id="pais-cadastro"
+              name="pais-cadastro"
+              onchange="carregarEstados()"
+              required
+            ></select>
+
+            <label for="estado-cadastro">Estado:</label>
+            <select
+              id="estado-cadastro"
+              name="estado-cadastro"
+              onchange="carregarCidades()"
+              required
+            ></select>
+
+            <label for="cidade-cadastro">Cidade:</label>
+            <select
+              id="cidade-cadastro"
+              name="cidade-cadastro"
+              required
+            ></select>
+
+            <label for="rua-cadastro">Rua:</label>
+            <input
+              type="text"
+              id="rua-cadastro"
+              name="rua-cadastro"
+              required
+              placeholder="Rua Tal da Minha Cidade"
+            />
+
+            <label for="complemento-cadastro">Complemento:</label>
+            <input
+              type="text"
+              id="complemento-cadastro"
+              name="complemento-cadastro"
+              placeholder="Bloco X Apartamento X"
+            />
+          </form>
+          <div class="div-botao">
+            <button type="button" id="botao-cadastro">Cadastrar</button>
+          </div>
+        </div>
+
+        <div id="login" style="display: none">
+          <h1>Logar</h1>
+          <form id="form-login">
+            <input
+              type="email"
+              name="email"
+              id="email-login"
+              placeholder="email@email.com"
+            />
+
+            <label for="senha">Senha:</label>
+            <input
+              type="password"
+              name="senha"
+              id="senha-login"
+              placeholder="•••••••••••"
+              required
+            />
+          </form>
+          <div class="div-botao">
+            <button type="button" id="botao-login">Logar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../scripts/conta.js"></script>
+    <script src="../scripts/pessoa.js"></script>
+  </body>
+</html>
