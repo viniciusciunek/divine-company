@@ -511,4 +511,9 @@ const produtos = [
 ];
 
 // está comentado porque se nao fica aumentando a quantidade depois da compra
-// localStorage.setItem("produtos", JSON.stringify(produtos));
+
+if (!localStorage.getItem("produtos")) {
+  console.log("Sem produtos adicionados, adicionando....");
+
+  localStorage.setItem("produtos", JSON.stringify(produtos));
+}

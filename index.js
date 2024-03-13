@@ -3,11 +3,11 @@ window.scroll({
   behavior: "smooth",
 });
 
-// Variáveis de controle de paginação
+// controle de paginação
 let paginaAtual = 1;
 
-// tanto de protudos na pagina
-const produtosPorPagina = 8; // Altere o valor conforme necessário
+// tanto de produtos na página
+const produtosPorPagina = 10; // Altere o valor conforme necessário
 
 // evento de enter realizar a pesquisa
 const inputPesquisa = document.getElementById("input-pesquisa");
@@ -487,7 +487,6 @@ function calcularTotal() {
   carrinhoElement.innerHTML = carrinhoHTML;
 
   totalCompra = total;
-  console.log(totalCompra);
 }
 
 // Adiciona um evento change ao select do carrinho
